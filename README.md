@@ -1,4 +1,4 @@
-# ICT-06_LB01_Elena
+# ICT-06_LB01_Name
 
 ## Get started with the Full Stack Web App Using Vue.Js, Express Js and MySQL
 
@@ -42,6 +42,7 @@ To create a database with MySQL, it can be done by executing the following query
 
 ```
 CREATE DATABASE pos_db;
+use pos_db;
 ``` 
 Next, create a table in the “pos_db” database.
 To create a "product" table, it can be done by executing the following SQL command:
@@ -412,6 +413,10 @@ Open your browser, then visit the following URL:
 ```
 http://localhost:8080/
 ```
+
+If it goes well, it will look like this:
+![Vue.js Start Template](https://mfikri.com/assets/images/files/en/fullstack/welcome-vue.png)
+
 
 Step 3: Components
 
