@@ -63,16 +63,17 @@ Next, open a terminal in Visual Studio Code on the terminal menu bar.
 
 Then, create a "backend" folder in the "fullstack-app" folder by typing the following command in the terminal:
 ```
-cd backend
+mkdir backend
 ```
 Then go to the "backend" folder by typing the following command:
 ```
-npm init –y
+cd backend
 ```
-Step 2: After that, type the following command to create a "package.json" file in the "backend" folder:
+After that, type the following command to create a "package.json" file in the "backend" folder:
 ```
-npm install
+npm init -y
 ```
+
 ##### Remarks for MacOS-users
 When using  `npm` on the command line the usage differs on Windows and MacOS based platforms.
 
