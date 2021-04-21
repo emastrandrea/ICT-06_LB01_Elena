@@ -133,9 +133,6 @@ Then create a file "database.js" in the "config" folder, create a file "productM
 Look at the following picture for more details:
 
 ![App Structure](https://mfikri.com/assets/images/files/en/fullstack/app-strucktur.png)
-<img src="https://mfikri.com/assets/images/files/en/fullstack/app-strucktur.png"
-     alt="App Structure"
-     style="float: left; margin-right: 10px;" />
 
 ### Part 4: Server - Add program code for database connection
 #### Steps
