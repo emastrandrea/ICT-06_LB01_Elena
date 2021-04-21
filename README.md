@@ -301,7 +301,7 @@ export const deleteProduct = (id, result) => {
 
 Step 4: Routes
 
-Open the "productModel.js" file in the "models" folder, then type the following code:
+Open the "routes.js" file in the "routes" folder, then type the following code:
 ```
 // import express
 import express from "express";
