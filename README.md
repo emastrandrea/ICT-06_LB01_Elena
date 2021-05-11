@@ -170,9 +170,9 @@ Open the "productModel.js" file in the "models" folder, then type the following 
 ```        
 // import connection
 import db from "../config/database.js";
-
+ 
 // Get All Products
-export const showProducts = (result) => {
+export const getProducts = (result) => {
     db.query("SELECT * FROM product", (err, results) => {             
         if(err) {
             console.log(err);
@@ -182,9 +182,9 @@ export const showProducts = (result) => {
         }
     });   
 }
-
+ 
 // Get Single Product
-export const showProductById = (id, result) => {
+export const getProductById = (id, result) => {
     db.query("SELECT * FROM product WHERE product_id = ?", [id], (err, results) => {             
         if(err) {
             console.log(err);
@@ -194,9 +194,9 @@ export const showProductById = (id, result) => {
         }
     });   
 }
-
+ 
 // Insert Product to Database
-export const createProduct = (data, result) => {
+export const insertProduct = (data, result) => {
     db.query("INSERT INTO product SET ?", [data], (err, results) => {             
         if(err) {
             console.log(err);
@@ -206,9 +206,9 @@ export const createProduct = (data, result) => {
         }
     });   
 }
-
+ 
 // Update Product to Database
-export const updateProduct = (data, id, result) => {
+export const updateProductById = (data, id, result) => {
     db.query("UPDATE product SET product_name = ?, product_price = ? WHERE product_id = ?", [data.product_name, data.product_price, id], (err, results) => {             
         if(err) {
             console.log(err);
@@ -218,9 +218,9 @@ export const updateProduct = (data, id, result) => {
         }
     });   
 }
-
-// Delete Product from Database
-export const deleteProduct = (id, result) => {
+ 
+// Delete Product to Database
+export const deleteProductById = (id, result) => {
     db.query("DELETE FROM product WHERE product_id = ?", [id], (err, results) => {             
         if(err) {
             console.log(err);
@@ -239,7 +239,7 @@ Open the "product.js" file in the "controllers" folder, then type the code below
 ```
 // Import function from Product Model
 import { getProducts, getProductById, insertProduct, updateProductById, deleteProductById } from "../models/productModel.js";
-
+ 
 // Get All Products
 export const showProducts = (req, res) => {
     getProducts((err, results) => {
@@ -250,7 +250,7 @@ export const showProducts = (req, res) => {
         }
     });
 }
-
+ 
 // Get Single Product 
 export const showProductById = (req, res) => {
     getProductById(req.params.id, (err, results) => {
@@ -261,7 +261,7 @@ export const showProductById = (req, res) => {
         }
     });
 }
-
+ 
 // Create New Product
 export const createProduct = (req, res) => {
     const data = req.body;
@@ -273,7 +273,7 @@ export const createProduct = (req, res) => {
         }
     });
 }
-
+ 
 // Update Product
 export const updateProduct = (req, res) => {
     const data  = req.body;
@@ -286,7 +286,7 @@ export const updateProduct = (req, res) => {
         }
     });
 }
-
+ 
 // Delete Product
 export const deleteProduct = (req, res) => {
     const id = req.params.id;
@@ -733,11 +733,10 @@ Back to browser and visit the following URL:
 ```
 http://localhost:8080/
 ```
+Try it out: Click the "Add New" button, then enter the Product Name and Price and click the "SAVE" button.
 
 If it goes well, after adding a new product it will look like the following image:
 ![Vue.js Example App](https://mfikri.com/assets/images/files/en/fullstack/product-list-added.png)
-
-Try it out: Click the "Add New" button, then enter the Product Name and Price and click the "SAVE" button.
 
 
 Based on: [mfikri.com](https://mfikri.com/en/blog/nodejs-express-mysql-vue#)
