@@ -734,4 +734,10 @@ Back to browser and visit the following URL:
 http://localhost:8080/
 ```
 
+If it goes well, after adding a new product it will look like the following image:
+![Vue.js Example App](https://mfikri.com/assets/images/files/en/fullstack/product-list-added.png)
+
+Try it out: Click the "Add New" button, then enter the Product Name and Price and click the "SAVE" button.
+
+
 Based on: [mfikri.com](https://mfikri.com/en/blog/nodejs-express-mysql-vue#)
